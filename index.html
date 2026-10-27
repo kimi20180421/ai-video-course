@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111110">
+<title>AI视频大师班 · 课程安排</title>
+<style>
+:root{color-scheme:dark;--ink:#ece8df;--muted:#c0b6a5;--gold:#d9ba80;--gold-light:#f3dfb3;--line:#3c3529;--body-size:14px}
+*{box-sizing:border-box}
+body{margin:0;background:#0d0d0c;color:var(--ink);font:14px/1.7 "PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;-webkit-font-smoothing:antialiased}
+.poster{max-width:1240px;margin:0 auto;padding:30px 26px 26px;background:radial-gradient(ellipse 75% 280px at 50% 0%,#7558271c,transparent),#111110}
+.hero{text-align:center;padding:4px 12px 28px}
+.eyebrow{display:inline-block;padding:7px 24px;border:1px solid #9c8050;border-radius:999px;background:linear-gradient(100deg,#3b3121,#25221b);color:var(--gold-light);font-size:14px;font-weight:600;line-height:1.5}
+h1{margin:19px 0 9px;font-size:42px;line-height:1.3;letter-spacing:-.035em;font-weight:800}
+h1 .accent{color:var(--gold-light)}
+h1 .divider{display:inline-block;margin:0 .24em;font-weight:300;color:#8e7956}
+h1 .course-title{display:inline-block}
+.subtitle{margin:0;font-size:16px;line-height:1.7;color:var(--muted)}
+.panel{border:1px solid #69543580;border-radius:13px;padding:15px;background:#171715}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:7px}
+table{width:100%;min-width:900px;border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:var(--body-size);line-height:1.75}
+col.module-col{width:20%}col.goal-col{width:22%}col.content-col{width:35%}col.result-col{width:23%}
+thead{color:#241f15;background:linear-gradient(105deg,#ead6aa,#d2af6c)}
+th{padding:13px 14px;font-size:16px;font-weight:700;text-align:center}
+th+th{border-left:1px solid #8b6b3538}
+td{vertical-align:top;padding:16px 14px;border-top:1px solid var(--line);background:#1b1b18}
+.course-row:nth-child(odd) td{background:#1e1d19}
+td+td{border-left:1px solid var(--line)}
+.stage-row th{padding:11px 14px;border-top:1px solid #8b73494f;background:linear-gradient(100deg,#3a3020,#25221b);text-align:left;color:var(--gold-light);font-size:16px}
+.stage-code{display:inline-block;font-family:Arial,sans-serif;font-weight:700;color:#e3bf7d;margin-right:12px}
+.module-name{font-size:15px;font-weight:700;line-height:1.7;color:#f0dfbc;margin:0}
+ul{list-style:none;margin:0;padding:0}
+li{position:relative;padding-left:11px}
+li+li{margin-top:4px}
+li:before{content:"";position:absolute;left:0;top:.77em;width:3px;height:3px;background:#c7a56d;border-radius:50%}
+.goals{color:#e0d9cc}.content{color:#e7e1d7}.results{color:#eadbc0}
+.table-wrap:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
+@media(max-width:800px){.poster{padding:22px 12px 14px}.hero{padding:0 5px 22px}.eyebrow{font-size:12px;padding:6px 17px}h1{font-size:29px;margin:15px 0 10px}h1 .divider{display:none}h1 .accent{display:block;font-size:24px;margin-bottom:5px}h1 .course-title{white-space:nowrap}.subtitle{font-size:14px}.panel{padding:9px;border-radius:10px}}
+@media print{@page{size:A3 portrait;margin:10mm}body{background:#111110;-webkit-print-color-adjust:exact;print-color-adjust:exact}.poster{max-width:none;padding:12px}.hero{padding-bottom:23px}h1{font-size:34px}.eyebrow{font-size:13px}.subtitle{font-size:14px}.panel{padding:10px}.table-wrap{overflow:visible;border-radius:0}table{min-width:0;font-size:14px}thead{display:table-header-group}th{font-size:16px;padding:12px 10px}td{padding:14px 10px}.course-row,.stage-row{break-inside:avoid;page-break-inside:avoid}.stage-row{break-after:avoid;page-break-after:avoid}}
+</style>
+</head>
+<body>
+<main class="poster" id="poster">
+ <header class="hero">
+  <div class="eyebrow">从基础制作到多类型视频创作</div>
+  <h1><span class="accent">课程安排</span><span class="divider">|</span><span class="course-title">AI视频大师班</span></h1>
+  <p class="subtitle">用AI打造属于你的故事世界</p>
+ </header>
+ <section class="panel" aria-label="AI视频大师班课程安排">
+  <div class="table-wrap" tabindex="0" aria-label="四列课程安排表，窄屏可横向滚动">
+   <table><colgroup><col class="module-col"><col class="goal-col"><col class="content-col"><col class="result-col"></colgroup><thead><tr><th scope="col">课程模块</th><th scope="col">学习目标</th><th scope="col">课程内容</th><th scope="col">学习结果</th></tr></thead><tbody id="courses"></tbody></table>
+  </div>
+ </section>
+</main>
+<script>
+const stages = [
+  {
+    "id": "foundation",
+    "code": "L1",
+    "title": "基础实战",
+    "courses": [
+      {
+        "name": "行业认知",
+        "goals": [
+          "看懂AI视频的应用与变现方向",
+          "确定首部作品的创作方向"
+        ],
+        "content": [
+          "行业应用、制作分工与面向用户、商业客户、IP的变现路径",
+          "参考账号拆解：选题、受众、作品形式与制作规模"
+        ],
+        "results": [
+          "完成参考账号分析",
+          "确定首作的题材与方向"
+        ]
+      },
+      {
+        "name": "工具介绍",
+        "goals": [
+          "完成工具与账号准备",
+          "熟悉基础生成与项目操作"
+        ],
+        "content": [
+          "工具注册配置，以及图像、视频、声音和剪辑工具的分工",
+          "参考材料与提示词的使用，基础图像和视频生成",
+          "素材下载、保存与项目文件整理"
+        ],
+        "results": [
+          "完成工具准备",
+          "完成一次基础生成与保存练习"
+        ]
+      },
+      {
+        "name": "故事构思与剧本开发",
+        "goals": [
+          "理解短篇故事的结构",
+          "形成适合第一轮实操的剧本"
+        ],
+        "content": [
+          "参考作品拆解：题材、人设、冲突、开头与情节结构",
+          "借鉴成熟结构改写短篇故事，或选用老师提供的剧本",
+          "根据制作条件控制角色、场景与镜头规模"
+        ],
+        "results": [
+          "确定首作剧本",
+          "明确故事结构与制作范围"
+        ]
+      },
+      {
+        "name": "导演思维与分镜设计",
+        "goals": [
+          "将剧本拆成可以制作的镜头",
+          "明确全片的画面与视觉方向"
+        ],
+        "content": [
+          "焦距、景别、运镜、光影与构图的基础运用",
+          "将剧本转成结构化分镜，安排镜头叙事与衔接",
+          "全片视觉风格与色调设定"
+        ],
+        "results": [
+          "完成首作分镜脚本",
+          "明确每个镜头的画面与制作要求"
+        ]
+      },
+      {
+        "name": "角色与视觉资产制作",
+        "goals": [
+          "制作首作需要的视觉资产",
+          "建立后续镜头可调用的素材"
+        ],
+        "content": [
+          "角色外形设定，角色、场景与道具参考图制作",
+          "多视图、音色与提示词整理，建立可调用的资产包",
+          "资产生成问题修正、命名与保存"
+        ],
+        "results": [
+          "完成首作基础资产包",
+          "形成角色、场景、道具与音色记录"
+        ]
+      },
+      {
+        "name": "AI视频生成实战",
+        "goals": [
+          "按分镜完成首版镜头素材",
+          "学会检查并修正基础生成问题"
+        ],
+        "content": [
+          "按分镜搭建生成步骤，调用角色、场景、道具与音色",
+          "结合提示词和对白控制画面风格与镜头衔接",
+          "识别并修正角色变化、动作异常，筛选可用素材"
+        ],
+        "results": [
+          "完成首作镜头素材",
+          "整理可用素材与待修改镜头"
+        ]
+      },
+      {
+        "name": "配音、音效与配乐",
+        "goals": [
+          "为画面配齐声音素材",
+          "建立基本的情绪与空间感"
+        ],
+        "content": [
+          "对白生成与音色校对，处理不合适的配音",
+          "环境音、音效与BGM的生成、选用和情绪匹配",
+          "音量平衡与音轨保存、导出"
+        ],
+        "results": [
+          "完成对白、音效与配乐素材",
+          "形成可用于剪辑的声音文件"
+        ]
+      },
+      {
+        "name": "剪映剪辑与成片输出",
+        "goals": [
+          "将镜头与声音整合为完整作品",
+          "完成首部短片或完整单集"
+        ],
+        "content": [
+          "时间线搭建、对白对齐与镜头节奏调整",
+          "常用转场及J-cut、L-cut的声画衔接",
+          "字幕、角色Title、声明页、分集钩子与成片导出"
+        ],
+        "results": [
+          "完成首部AI剧情短片或单集",
+          "保留完整的剪辑工程与素材"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "advanced",
+    "code": "L2",
+    "title": "进阶+专题提升",
+    "courses": [
+      {
+        "name": "作品分析与案例定位",
+        "goals": [
+          "学会分析作品与发布反馈",
+          "确定案例的方向与制作重点"
+        ],
+        "content": [
+          "平台规则、封面简介、合同与素材权属基础",
+          "结合完播、流失和评论，分析作品的内容与制作问题",
+          "拆解案例受众与表达方式，确定选题和改进重点"
+        ],
+        "results": [
+          "形成作品诊断与案例分析记录",
+          "明确案例的方向与制作重点"
+        ]
+      },
+      {
+        "name": "剧本与开头进阶",
+        "goals": [
+          "学会调整故事与人物冲突",
+          "让开头更清楚、更有吸引力"
+        ],
+        "content": [
+          "开篇结构、人物关系与冲突设置的调整",
+          "前30秒的悬念与人物出场，前1—2分钟的情节推进",
+          "案例剧本与分镜改写，说明关键修改依据"
+        ],
+        "results": [
+          "完成案例的剧本与开头调整",
+          "形成关键修改前后对比"
+        ]
+      },
+      {
+        "name": "角色一致性与资产复用",
+        "goals": [
+          "提高不同镜头中角色的稳定性",
+          "学会将资产用于不同场景与任务"
+        ],
+        "content": [
+          "提炼外形、服装与识别特征，约束跨场景和跨镜头表现",
+          "分析一致性问题，修正多镜头角色素材",
+          "复用并完善角色、场景和道具资产"
+        ],
+        "results": [
+          "完成一组较统一的多镜头角色素材",
+          "完善可复用的资产与提示词记录"
+        ]
+      },
+      {
+        "name": "镜头表达与生成质量优化",
+        "goals": [
+          "应对更复杂的动作与镜头要求",
+          "提高镜头可用性和衔接质量"
+        ],
+        "content": [
+          "复杂动作、运镜与连续镜头的制作",
+          "结合失败原因调整参数和参考材料，重做问题镜头",
+          "检查画面风格、动作与镜头衔接的连续性"
+        ],
+        "results": [
+          "完成案例的连续镜头素材",
+          "整理生成与修改方法"
+        ]
+      },
+      {
+        "name": "声音层次与剪辑节奏进阶",
+        "goals": [
+          "提高声音、画面与叙事的配合",
+          "完成案例的整体呈现"
+        ],
+        "content": [
+          "对白、环境音、音效和配乐的层次与情绪配合",
+          "调整信息密度、镜头时长与段落节奏",
+          "对比案例修改效果，完成整片修订"
+        ],
+        "results": [
+          "完成案例成片或对应实践作品",
+          "整理声画与节奏的修改对比"
+        ]
+      },
+      {
+        "name": "商品带货视频\n工作流与智能体",
+        "goals": [
+          "理解商品展示与转化逻辑",
+          "搭建可复用的带货视频制作流程"
+        ],
+        "content": [
+          "带货结构与转化逻辑，商品图和特征资料整理",
+          "佩戴、换装、使用场景制作与商品一致性控制",
+          "搭建工作流与智能体，串联出片流程并演示换品调整"
+        ],
+        "results": [
+          "完成一个带货视频案例",
+          "形成工作流或智能体及使用说明"
+        ]
+      },
+      {
+        "name": "商业宣传片\n完整案例实操",
+        "goals": [
+          "理解商业需求与创意表达",
+          "跟随案例完成宣传片制作流程"
+        ],
+        "content": [
+          "品牌、产品与招商宣传的需求差异及交付要求",
+          "从品牌调性出发，完成创意、脚本、分镜与关键镜头",
+          "结合案例完成声画包装，讲解客户沟通与修改要点"
+        ],
+        "results": [
+          "跑通一个商业宣传片案例",
+          "完成对应的创意、镜头或成片练习"
+        ]
+      },
+      {
+        "name": "平台短视频\n完整案例实操",
+        "goals": [
+          "理解平台内容与短视频表达逻辑",
+          "跟随案例完成短视频制作流程"
+        ],
+        "content": [
+          "平台内容特点，以及人群需求、热点与参考选题的选择",
+          "30—60秒脚本、开头钩子与镜头组织，同题开头对照",
+          "案例素材制作、节奏剪辑、封面发布与反馈观察"
+        ],
+        "results": [
+          "跑通一个平台短视频案例",
+          "完成对应的脚本、开头或成片练习"
+        ]
+      },
+      {
+        "name": "个人作品集",
+        "goals": [
+          "搭建有重点的个人作品集结构",
+          "讲清项目价值与个人创作贡献"
+        ],
+        "content": [
+          "筛选代表作品，安排个人介绍、作品总览与项目详情",
+          "围绕创作目标、创意、个人贡献和成果组织项目叙述",
+          "编排成片与必要过程材料，修改标题、简介和展示讲述"
+        ],
+        "results": [
+          "完成个人作品集结构与代表项目编排",
+          "形成可用于展示的项目叙述与介绍文案"
+        ]
+      }
+    ]
+  }
+];
+function list(items,cls){const ul=document.createElement('ul');ul.className=cls;items.forEach(text=>{const li=document.createElement('li');li.textContent=text;ul.append(li)});return ul}
+const tbody=document.getElementById('courses');
+stages.forEach(stage=>{
+ const row=document.createElement('tr');row.className='stage-row';row.id=stage.id;
+ const th=document.createElement('th');th.scope='rowgroup';th.colSpan=4;
+ const code=document.createElement('span');code.className='stage-code';code.textContent=stage.code;
+ th.append(code,document.createTextNode(stage.title));row.append(th);tbody.append(row);
+ stage.courses.forEach(course=>{
+  const tr=document.createElement('tr');tr.className='course-row';
+  const first=document.createElement('td');const p=document.createElement('p');p.className='module-name';
+  course.name.split('\n').forEach((line,i)=>{if(i)p.append(document.createElement('br'));p.append(document.createTextNode(line))});first.append(p);tr.append(first);
+  ['goals','content','results'].forEach(key=>{const td=document.createElement('td');td.append(list(course[key],key));tr.append(td)});tbody.append(tr);
+ });
+});
+</script>
+</body>
+</html>
